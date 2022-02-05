@@ -1,5 +1,6 @@
 package pageObject;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -37,6 +38,18 @@ public class Login2Page {
     public void  clickLogin()
     {
         btnLogin.click();
+    }
+
+    public By getUserName()
+    {
+        By un=By.id("log_username");
+        return un;
+    }
+
+    public By getLoginBtn()
+    {
+        By lb=By.xpath("//div[@id='signin-button']");
+        return lb;
     }
 
 }
